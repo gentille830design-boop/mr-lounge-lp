@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>修了生継続プラン | MAISON de RIT lounge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:     #f7f2ed;
+      --sand:      #ede5db;
+      --taupe:     #c9bdb1;
+      --warm-gray: #8c7f76;
+      --brown:     #4a3f38;
+      --dark:      #3a3230;
+      --gold:      #b89a5a;
+      --gold-bg:   #c9a84c;
+      --slate:     #4a5d6a;
+      --orange:    #c4622d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      font-weight: 300;
+      line-height: 1.85;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--cream);
+    }
+    .hero-img {
+      width: 100%;
+      height: 60vw;
+      max-height: 300px;
+      background: linear-gradient(135deg, #d6cec6 0%, #c4b8ae 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--warm-gray); font-size: .75rem; letter-spacing: .15em;
+      overflow: hidden;
+    }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: .92; }
+    .hero-content {
+      padding: 2.5rem 1.5rem 3rem;
+      border-bottom: 1.5px solid var(--taupe);
+    }
+    .hero-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .75rem;
+      letter-spacing: .35em;
+      color: var(--warm-gray);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: .25em;
+      color: var(--brown);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--dark);
+      margin-bottom: 2rem;
+      letter-spacing: .05em;
+    }
+    .hero-border {
+      width: 32px; height: 1px;
+      background: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .hero-sub {
+      font-size: .8rem;
+      color: var(--warm-gray);
+      letter-spacing: .12em;
+    }
+
+    /* ─── SECTION COMMON ─── */
+    section { padding: 3rem 0; }
+
+    .inner { padding: 0 1.5rem; }
+
+    .sec-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .72rem;
+      letter-spacing: .3em;
+      color: var(--warm-gray);
+      text-transform: uppercase;
+      margin-bottom: .75rem;
+    }
+    .sec-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: .08em;
+      color: var(--dark);
+      line-height: 1.65;
+      margin-bottom: .75rem;
+    }
+    .sec-title em { font-style: italic; color: var(--gold); }
+    .sec-rule {
+      width: 32px; height: 1px;
+      background: var(--gold);
+      margin: 1.25rem 0 2rem;
+    }
+
+    /* ─── JOURNEY ─── */
+    .journey { background: var(--sand); }
+
+    .journey-col {
+      background: var(--cream);
+      border: 1.5px solid var(--taupe);
+      padding: 1.25rem;
+      margin-bottom: 1px;
+    }
+    .journey-col-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .8rem;
+      color: var(--warm-gray);
+      letter-spacing: .15em;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--taupe);
+      margin-bottom: 1rem;
+    }
+    .journey-item {
+      font-size: .83rem;
+      color: var(--dark);
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--sand);
+      letter-spacing: .04em;
+    }
+    .journey-item:last-child { border-bottom: none; }
+
+    .journey-badge {
+      background: var(--gold-bg);
+      color: white;
+      text-align: center;
+      padding: 1rem 1.5rem;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .85rem;
+      letter-spacing: .12em;
+      margin-top: 1.5rem;
+    }
+
+    /* ─── NEXT STAGE ─── */
+    .next-stage { background: var(--cream); }
+
+    .stage-box {
+      padding: 1.5rem;
+      background: var(--sand);
+      border: 1.5px solid var(--taupe);
+      margin-bottom: .75rem;
+    }
+    .stage-box.active {
+      background: var(--warm-gray);
+      border-color: var(--warm-gray);
+    }
+    .stage-box-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .8rem;
+      letter-spacing: .18em;
+      color: var(--warm-gray);
+      margin-bottom: .4rem;
+    }
+    .stage-box.active .stage-box-label { color: rgba(255,255,255,.7); }
+    .stage-box-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .95rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+    .stage-box.active .stage-box-title { color: white; }
+    .stage-tag {
+      display: block;
+      background: var(--taupe);
+      color: var(--dark);
+      font-size: .78rem;
+      padding: .45rem .9rem;
+      margin-bottom: .5rem;
+      letter-spacing: .04em;
+    }
+    .stage-box.active .stage-tag {
+      background: rgba(255,255,255,.22);
+      color: white;
+    }
+    .stage-arrow {
+      text-align: center;
+      color: var(--taupe);
+      font-size: 1.2rem;
+      margin: .5rem 0;
+    }
+
+    /* ─── OUTPUT ─── */
+    .output { background: var(--dark); }
+    .output .sec-title { color: var(--cream); }
+    .output .sec-label { color: var(--taupe); }
+    .output .sec-rule  { background: var(--gold); }
+
+    .output-highlight {
+      display: block;
+      background: var(--gold-bg);
+      color: white;
+      padding: .85rem 1.25rem;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .88rem;
+      letter-spacing: .15em;
+      margin-bottom: 2rem;
+    }
+    .output-list { list-style: none; }
+    .output-list li {
+      display: flex;
+      gap: .9rem;
+      align-items: flex-start;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .output-list li:last-child { border-bottom: none; }
+    .output-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 1.8rem;
+    }
+    .output-text {
+      font-size: .85rem;
+      color: #bbb4ad;
+      line-height: 1.75;
+      padding-top: .25rem;
+    }
+    .output-text strong { color: var(--cream); font-weight: 400; }
+
+    /* ─── LOUNGE ─── */
+    .lounge { background: var(--cream); }
+
+    .lounge-card {
+      border: 1.5px solid var(--taupe);
+      margin-bottom: 1px;
+      display: flex;
+      gap: 0;
+    }
+    .lounge-card-badge {
+      background: var(--warm-gray);
+      color: white;
+      font-size: .7rem;
+      letter-spacing: .1em;
+      padding: .75rem .7rem;
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .lounge-card-badge.orange { background: var(--orange); }
+    .lounge-card-body { padding: 1.25rem; }
+    .lounge-card-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .9rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: .35rem;
+    }
+    .lounge-card-time {
+      font-size: .78rem;
+      color: var(--warm-gray);
+      letter-spacing: .04em;
+      margin-bottom: .6rem;
+    }
+    .lounge-card-desc {
+      font-size: .78rem;
+      color: var(--warm-gray);
+      line-height: 1.75;
+    }
+
+    .lounge-options {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--taupe);
+      border: 1.5px solid var(--taupe);
+    }
+    .lounge-option {
+      background: var(--sand);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .lounge-option.cream { background: var(--cream); }
+    .lounge-option-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .88rem;
+      color: var(--dark);
+    }
+    .lounge-option-right { text-align: right; }
+    .lounge-option-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: var(--brown);
+    }
+    .lounge-option-price s { color: var(--taupe); font-size: 1rem; }
+    .lounge-option-note {
+      font-size: .7rem;
+      color: var(--warm-gray);
+      margin-top: .2rem;
+    }
+
+    /* ─── HOW ─── */
+    .how { background: var(--sand); }
+
+    .how-step {
+      background: var(--cream);
+      border: 1.5px solid var(--taupe);
+      margin-bottom: 1px;
+      display: flex;
+    }
+    .how-step-badge {
+      background: var(--warm-gray);
+      color: white;
+      font-size: .68rem;
+      letter-spacing: .08em;
+      padding: .75rem .65rem;
+      writing-mode: vertical-lr;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      min-height: 100px;
+    }
+    .how-step-badge.orange { background: var(--orange); }
+    .how-step-body { padding: 1.25rem; }
+    .how-step-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .88rem;
+      color: var(--dark);
+      margin-bottom: .3rem;
+    }
+    .how-step-time {
+      font-size: .75rem;
+      color: var(--gold);
+      margin-bottom: .6rem;
+    }
+    .how-step-desc {
+      font-size: .78rem;
+      color: var(--warm-gray);
+      line-height: 1.8;
+    }
+    .how-step-note {
+      font-size: .72rem;
+      color: var(--taupe);
+      margin-top: .5rem;
+      display: block;
+    }
+
+    /* ─── PRICING ─── */
+    .pricing { background: var(--cream); }
+
+    .pricing-card {
+      border: 1.5px solid var(--taupe);
+      padding: 1.5rem;
+      margin-bottom: 1px;
+    }
+    .pricing-card.featured { background: var(--cream); }
+    .pricing-card:not(.featured) { background: var(--sand); }
+    .pricing-type {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .78rem;
+      letter-spacing: .25em;
+      color: var(--warm-gray);
+      text-transform: uppercase;
+      margin-bottom: .4rem;
+    }
+    .pricing-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: .2rem;
+    }
+    .pricing-amount sup { font-size: 1rem; vertical-align: super; }
+    .pricing-amount sub { font-size: .85rem; color: var(--warm-gray); }
+    .pricing-per {
+      font-size: .75rem;
+      color: var(--warm-gray);
+      margin-bottom: 1rem;
+    }
+    .pricing-detail {
+      font-size: .78rem;
+      color: var(--warm-gray);
+      line-height: 1.8;
+    }
+    .pricing-detail strong { color: var(--dark); font-weight: 400; }
+
+    .pricing-purpose {
+      background: var(--gold-bg);
+      color: white;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .pricing-purpose-label {
+      font-size: .72rem;
+      letter-spacing: .2em;
+      opacity: .85;
+      margin-bottom: .4rem;
+    }
+    .pricing-purpose-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .9rem;
+      font-weight: 400;
+      letter-spacing: .04em;
+      line-height: 1.7;
+    }
+
+    /* ─── CTA ─── */
+    .cta { background: var(--slate); }
+    .cta .sec-title { color: white; }
+    .cta .sec-label { color: var(--taupe); }
+    .cta .sec-rule  { background: var(--gold); }
+
+    .cta-start {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--taupe);
+      letter-spacing: .1em;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .cta-start strong { color: white; font-weight: 400; display: block; font-size: 1.05rem; }
+
+    .cta-box {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta-box-label {
+      font-family: 'Noto Serif JP', serif;
+      font-size: .75rem;
+      color: var(--taupe);
+      letter-spacing: .15em;
+      margin-bottom: .6rem;
+    }
+    .cta-deadline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: white;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background: var(--gold-bg);
+      color: white;
+      padding: 1.1rem 1rem;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .85rem;
+      letter-spacing: .18em;
+      text-decoration: none;
+      text-align: center;
+      margin-bottom: .75rem;
+      transition: opacity .2s;
+    }
+    .btn-primary:hover { opacity: .85; }
+
+    .btn-secondary {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: white;
+      padding: 1.1rem 1rem;
+      font-family: 'Noto Serif JP', serif;
+      font-size: .85rem;
+      letter-spacing: .18em;
+      text-decoration: none;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.38);
+      transition: opacity .2s;
+    }
+    .btn-secondary:hover { opacity: .75; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--dark);
+      color: var(--taupe);
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      letter-spacing: .3em;
+      color: var(--cream);
+      margin-bottom: .4rem;
+    }
+    .footer-tagline {
+      font-size: .72rem;
+      letter-spacing: .18em;
+      opacity: .55;
+    }
+    .footer-sub {
+      font-size: .68rem;
+      opacity: .4;
+      letter-spacing: .1em;
+      margin-top: .6rem;
+    }
+    .footer-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--taupe);
+      margin-top: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-img">
+    <span>photo</span>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Maison de RIT</p>
+    <p class="hero-brand">MAISON DE RIT</p>
+    <h1 class="hero-title">修了生<br>継続プランの<br>ご案内</h1>
+    <div class="hero-border"></div>
+    <p class="hero-sub">サービスとデザインを磨くアトリエ</p>
+  </div>
+</header>
+
+
+<!-- ══ これまでの歩み ══ -->
+<section class="journey">
+  <div class="inner">
+    <p class="sec-label">01 — Journey</p>
+    <h2 class="sec-title">これまでの歩み</h2>
+    <div class="sec-rule"></div>
+
+    <div class="journey-col">
+      <p class="journey-col-title">サービス向上委員会</p>
+      <div class="journey-item">マインドセット</div>
+      <div class="journey-item">コンセプト設計</div>
+      <div class="journey-item">コンテンツ設計</div>
+      <div class="journey-item">カリキュラム設計</div>
+      <div class="journey-item">プロモーション設計</div>
+    </div>
+
+    <div class="journey-col">
+      <p class="journey-col-title">デザイン向上委員会</p>
+      <div class="journey-item">洗練デザインのコツ</div>
+      <div class="journey-item">世界観デザイン制作</div>
+      <div class="journey-item">インスタ・動画制作</div>
+      <div class="journey-item">プロモーション資料</div>
+      <div class="journey-item">プロモーションLP</div>
+    </div>
+
+    <div class="journey-col">
+      <p class="journey-col-title">ゲスト＆イベント</p>
+      <div class="journey-item">ゲストセミナー<br><small style="color:var(--warm-gray)">コジーさん／すみれさん／櫻井先生／耀心先生</small></div>
+      <div class="journey-item">コンテンツを作りあげる合宿</div>
+      <div class="journey-item">リアル交流会＠鎌倉</div>
+    </div>
+
+    <div class="journey-badge">
+      この7ヶ月でマーケティング＆ブランディング力UP
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ NEXT STAGE ══ -->
+<section class="next-stage">
+  <div class="inner">
+    <p class="sec-label">02 — Next Stage</p>
+    <h2 class="sec-title">「知識」の先に<em>行くために</em></h2>
+    <div class="sec-rule"></div>
+
+    <div class="stage-box">
+      <p class="stage-box-label">Maison de RIT — 初回受講</p>
+      <p class="stage-box-title">インプット期</p>
+      <span class="stage-tag">すべてが新しい情報</span>
+      <span class="stage-tag">インプット割合多い</span>
+    </div>
+
+    <div class="stage-arrow">↓</div>
+
+    <div class="stage-box active">
+      <p class="stage-box-label">Maison de RIT — 継続</p>
+      <p class="stage-box-title">アウトプット期</p>
+      <span class="stage-tag">理解と定着で変化</span>
+      <span class="stage-tag">アウトプット割合多い</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ OUTPUT FOCUS ══ -->
+<section class="output">
+  <div class="inner">
+    <p class="sec-label">03 — Focus</p>
+    <h2 class="sec-title">これからの歩み<br>知識を形に</h2>
+    <div class="sec-rule"></div>
+
+    <span class="output-highlight">インプットより アウトプットに比重を置く</span>
+
+    <ul class="output-list">
+      <li>
+        <span class="output-num">①</span>
+        <span class="output-text"><strong>スキルの定着</strong></span>
+      </li>
+      <li>
+        <span class="output-num">②</span>
+        <span class="output-text">Maison de RIT の学び以上に<strong>行動に時間をかける</strong></span>
+      </li>
+      <li>
+        <span class="output-num">③</span>
+        <span class="output-text"><strong>仲間と共に向上する</strong><br>学びの情報交換・コラボレーション</span>
+      </li>
+      <li>
+        <span class="output-num">④</span>
+        <span class="output-text">サービス・デザインの質向上と共に<br><strong>ディレクション力も身につける</strong></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ══ LOUNGE CONTENTS ══ -->
+<section class="lounge">
+  <div class="inner">
+    <p class="sec-label">04 — Contents</p>
+    <h2 class="sec-title">MAISON de RIT<br><em>-lounge-</em></h2>
+    <div class="sec-rule"></div>
+
+    <div class="lounge-card">
+      <div class="lounge-card-badge">個別コンサル</div>
+      <div class="lounge-card-body">
+        <p class="lounge-card-name">個別コンサルDAY</p>
+        <p class="lounge-card-time">月１回　最終月曜日（祝の場合火）<br>9:30 – 11:00</p>
+        <p class="lounge-card-desc">
+          参加された方のうち順番に個別回答。<br>
+          他の方の相談×回答も学びに繋がります。<br>
+          不参加の場合はテキストにて解答。
+        </p>
+      </div>
+    </div>
+
+    <div class="lounge-card">
+      <div class="lounge-card-badge orange">アトリエYUKO</div>
+      <div class="lounge-card-body">
+        <p class="lounge-card-name">アトリエYUKO</p>
+        <p class="lounge-card-time">月１回　第２or3月曜日<br>9:30 – 10:30</p>
+        <p class="lounge-card-desc">
+          事前提出不要。制作中デザインのアドバイス。<br>
+          完成していなくても気軽に参加できる会。<br>
+          相談事がなくても「聞くだけ」参加可能。
+        </p>
+      </div>
+    </div>
+
+    <div class="lounge-options">
+      <div class="lounge-option cream">
+        <span class="lounge-option-title">ユキゼミ</span>
+        <div class="lounge-option-right">
+          <p class="lounge-option-price"><s>3.3</s> <strong>2.2</strong>万円</p>
+          <p class="lounge-option-note">60分 / サービスに関するコンサル</p>
+        </div>
+      </div>
+      <div class="lounge-option cream">
+        <span class="lounge-option-title">ユウコカテキョ</span>
+        <div class="lounge-option-right">
+          <p class="lounge-option-price"><s>3.3</s> <strong>2.2</strong>万円</p>
+          <p class="lounge-option-note">60分 / デザインに関する相談</p>
+        </div>
+      </div>
+      <div class="lounge-option">
+        <span class="lounge-option-title">2期コンテンツ</span>
+        <div class="lounge-option-right">
+          <p style="font-family:'Noto Serif JP',serif;font-size:.9rem;color:var(--dark)">資料＆動画 見放題</p>
+          <p class="lounge-option-note">※1期生は1期コンテンツ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="how">
+  <div class="inner">
+    <p class="sec-label">05 — How it Works</p>
+    <h2 class="sec-title">ラウンジの進め方</h2>
+    <div class="sec-rule"></div>
+
+    <div class="how-step">
+      <div class="how-step-badge">毎月の流れ</div>
+      <div class="how-step-body">
+        <p class="how-step-name">1ヶ月の動き＋相談事項を事前提出</p>
+        <p class="how-step-desc">個別コンサルDAYまでに提出してください。</p>
+      </div>
+    </div>
+
+    <div class="how-step">
+      <div class="how-step-badge">個別コンサル</div>
+      <div class="how-step-body">
+        <p class="how-step-name">個別コンサルDAY</p>
+        <p class="how-step-time">月１回　最終月曜日（祝の場合火）　9:30 – 11:00</p>
+        <p class="how-step-desc">
+          参加された方のうち順番に個別回答します。<br>
+          他の方の相談×回答も自分ごととして学びに繋がります。<br>
+          不参加の場合はテキストにて解答。
+        </p>
+      </div>
+    </div>
+
+    <div class="how-step">
+      <div class="how-step-badge orange">デザイン相談</div>
+      <div class="how-step-body">
+        <p class="how-step-name">アトリエYUKO</p>
+        <p class="how-step-time">月１回　第２or3月曜日　9:30 – 10:30</p>
+        <p class="how-step-desc">
+          事前提出不要。制作中デザインのアドバイスをもらえます。<br>
+          完成していなくても気軽に参加できる会。<br>
+          相談事がなくても「聞くだけ」参加可能です。
+          <span class="how-step-note">※受付していない内容：エラーチェック・キャッチコピー・ロゴやパッケージ制作</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PRICING ══ -->
+<section class="pricing">
+  <div class="inner">
+    <p class="sec-label">06 — Plan & Price</p>
+    <h2 class="sec-title">修了生継続プラン<br>4ヶ月間継続制</h2>
+    <div class="sec-rule"></div>
+
+    <div class="pricing-card featured">
+      <p class="pricing-type">4ヶ月一括</p>
+      <p class="pricing-amount"><sup>¥</sup>39,200<sub>（税込）</sub></p>
+      <p class="pricing-per">1ヶ月あたり ¥9,800（税込）</p>
+      <p class="pricing-detail">
+        <strong>銀行振込</strong><br>
+        ※クレジット決済の場合 ¥42,000（税込）
+      </p>
+    </div>
+
+    <div class="pricing-card">
+      <p class="pricing-type">月額</p>
+      <p class="pricing-amount"><sup>¥</sup>11,000<sub>（税込）</sub></p>
+      <p class="pricing-per">Paypal</p>
+      <p class="pricing-detail">毎月お支払い</p>
+    </div>
+
+    <div class="pricing-purpose">
+      <p class="pricing-purpose-label">目的</p>
+      <p class="pricing-purpose-text">安心安全な場所で切磋琢磨しながら<br>サービスとデザインを更に向上!!</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ CTA ══ -->
+<section class="cta">
+  <div class="inner">
+    <p class="sec-label">07 — Join Us</p>
+    <h2 class="sec-title">修了生継続プラン<br>お申し込み</h2>
+    <div class="sec-rule"></div>
+
+    <p class="cta-start">
+      <strong>2026年2月24日（火）　9:30 START</strong>
+      生み出す・行動する・創造する
+    </p>
+
+    <div class="cta-box">
+      <p class="cta-box-label">回答期限</p>
+      <p class="cta-deadline">2 / 13（金）迄</p>
+      <a href="#" class="btn-primary">継続プランに申し込む（一括）</a>
+      <a href="#" class="btn-secondary">継続プランに申し込む（分割）</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p class="footer-brand">MAISON DE RIT</p>
+  <p class="footer-tagline">サービスとデザインを磨くアトリエ</p>
+  <p class="footer-sub">LIFEもWORKもあなたらしく</p>
+  <p class="footer-names">yuki &amp; yuko</p>
+</footer>
+
+</body>
+</html>
