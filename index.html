@@ -491,21 +491,29 @@
     .pricing-purpose {
       background: var(--gold-bg);
       color: white;
-      padding: 1.25rem 1.5rem;
+      padding: 2rem 1.5rem;
       margin-top: 1.5rem;
+      text-align: center;
     }
     .pricing-purpose-label {
-      font-size: .72rem;
-      letter-spacing: .2em;
-      opacity: .85;
-      margin-bottom: .4rem;
+      font-size: .7rem;
+      letter-spacing: .25em;
+      opacity: .8;
+      margin-bottom: 1rem;
     }
     .pricing-purpose-text {
       font-family: 'Noto Serif JP', serif;
-      font-size: .9rem;
+      font-size: 1rem;
       font-weight: 400;
-      letter-spacing: .04em;
-      line-height: 1.7;
+      letter-spacing: .06em;
+      line-height: 2;
+    }
+    .pricing-purpose-text .purpose-flow {
+      display: block;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      margin-top: .4rem;
     }
 
     /* ─── CTA ─── */
@@ -885,7 +893,11 @@
 
     <div class="pricing-purpose">
       <p class="pricing-purpose-label">目的</p>
-      <p class="pricing-purpose-text">実践 → 集客 → 売上へ</p>
+      <p class="pricing-purpose-text">
+        知識を眠らせない。
+        <span class="purpose-flow">実践 → 集客 → 売上</span>
+        その流れをつくる場所。
+      </p>
     </div>
   </div>
 </section>
